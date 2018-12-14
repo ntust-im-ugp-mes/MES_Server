@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block mainbody %}
+    <head>
+        <style type="text/css">
+            #winl{
+                width: 48%;
+                height: 400px;
+                float:left;
+                margin: 1% auto auto 1%;
+                background-color: #2b2a2b;
+
+                border-style: groove;
+                border-width: 2px;
+                border-collapse:collapse;
+            }
+            #winr{
+                width: 48%;
+                height: 400px;
+                float:right;
+                margin: 1% 1% auto auto;
+                background-color: #2b2a2b;
+
+                border-style: groove;
+                border-width: 2px;
+            }
+            #winbar{
+                width: auto;
+                height:10%;
+                float: start;
+                background-color: #1b1a1b;
+
+                margin: auto auto auto auto;
+            }
+            #sbsf{
+
+            }
+            #sbof{
+
+            }
+
+            table{
+                height: auto;
+                width:100%;
+                border:0px solid green;
+            }
+            td{
+                border:0px solid;
+            }
+            tr:nth-child(odd){
+                background: #5f5e5f;
+            }
+            tr:nth-child(even){
+                background: #878a84;
+            }
+        </style>
+    </head>
+
+    <div id="winl">
+        <div id="winbar">
+            <div>
+                <span style="line-height: 40px; color: #d6d6d6; font-size:18px;">Station View State</span>
+            </div>
+        </div>
+        <div id="sbsf">
+            <table>
+            {% for i in status_by_station %}
+                <tr><td><span style="color: #000000">{{ i }}</span></td></tr>
+            {% endfor %}
+            </table>
+        </div>
+    </div>
+
+    <div id="winr">
+        <div id="winbar">
+            <div>
+                <span style="line-height: 40px; color: #d6d6d6; font-size:18px;">Object View State</span>
+            </div>
+        </div>
+        <div id="sbof">
+            <table>
+            {% for i in status_by_object %}
+                <tr><td><span style="color: #000000">{{ i }}</span></td></tr>
+            {% endfor %}
+            </table>
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{
+  "production_line": {
+    "station": {
+      "s1": {
+        "Name": "s1",
+        "Text": "Initial Station"
+      },
+      "s2": {
+        "Name": "s2",
+        "Text": "Final Station"
+      },
+	  "s3": {
+        "Name": "s3",
+        "Text": "Final Station"
+      }
+    },
+    "virtual_station": {
+      "v1": {
+        "Name": "v1",
+        "Text": "Main Conveyor"
+      }
+    },
+    "flow": {
+      "f1": {
+        "Name": "f1",
+        "Text": "Initial State",
+        "Origin": "START",
+        "Destination":  "s1"
+      },
+      "f2": {
+        "Name": "f2",
+        "Text": "Put Object from Station1 to Conveyor",
+        "Origin": "s1",
+        "Destination":  "v1"
+      },
+      "f3": {
+        "Name": "f3",
+        "Text": "Put Object from Conveyor to Station2",
+        "Origin": "v1",
+        "Destination":  "s2"
+      },
+      "f4": {
+        "Name": "f4",
+        "Text": "Put Object from Station2 to exterior parts ",
+        "Origin": "s2",
+        "Destination":  "END"
+      }
+    }
+  }
+}

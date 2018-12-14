@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/menu_bar.css' %}">
+    <title>Manufacturing Execution System</title>
+
+  </head>
+
+  <body>
+
+    <div id="menu-center">
+      <div id="menu">
+        <div class="list_OpBg"></div>
+        <ul class="list">
+          <li>
+            <a href="Schedule.html">生產排程</a>
+            <div class="list_OpBg2"></div>
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="Moniter.html">製品監控</a>
+            <div class="list_OpBg2"></div>
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="Quality.html">品質管理</a>
+            <div class="list_OpBg2"></div>
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="Equipment.html">設備管理</a>
+            <div class="list_OpBg2"></div>
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="Inventory.html">庫存管理</a>
+            <div class="list_OpBg2"></div>
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="Statistics.html">統計概覽</a>
+            <div class="list_OpBg2"></div>
+            <ul>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {% block mainbody %}
+
+    {% endblock %}
+
+  </body>
+</html>
