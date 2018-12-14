@@ -1,0 +1,68 @@
+body, ul, il, div{
+  /*清除body, ul, il, div元素的外距跟內距*/
+    margin:0px;
+    padding:0px;
+}
+body{
+  /*設定頁面背景圖*/
+    background-color: #363536;
+}
+#menu-center{
+  /*設定menu內容區塊*/
+  width:auto;/*寬度自動*/
+  margin:auto auto auto auto;/*的上/下外距為10px 左/右auto(代表置中須設定寬度才有效)*/
+}
+a{
+  /*設定連結基本樣式*/
+  color:#FFF;/*文字白色*/
+  text-decoration:none;/*去除連結底線*/
+}
+a:hover{
+  /*設定滑鼠滑過連結樣式*/
+  color:#FFF;/*文字白色*/
+}
+#menu{
+  /*設定選單樣式*/
+  width:100%;/*寬度100%(會自動等同於#menu-center的大小)*/
+  float:left;/*向左浮動顯示(讓ul呈現橫向顯示)*/
+  background: #005459; /*設定選單背景為黑色透明度60%*/
+}
+ul{
+  /*ul中的項目樣式*/
+  list-style:none;/*清除項目樣式*/
+}
+#menu ul.list>li{
+  /*設定第一層選單樣式*/
+  display:block;/*設定li為區塊元素*/
+  float:left;/*向左浮動*/
+  position:relative;/*設定為相對位置*/
+  width:16.66%;/*每個li的寬度(以700px為計算基準)*/
+  padding:5px 0px;/*每個li上/下內距為5px 左/右內距為0px*/
+  text-align:center;/*li元素內容置中*/
+}
+#menu ul.list>li ul{
+  /*設定第二層選單樣式*/
+  display:none;/*隱藏區塊*/
+  position:absolute;/*設定為絕對位置*/
+  margin:5px auto 0 auto;/*外距設定上距為5px下距0px左/右自動置中*/
+  width:100%;/*寬度100%會自動對齊第一層menu的li元素*/
+}
+#menu ul.list>li ul li{
+  /*設定第二層選單的li樣式*/
+  text-align:center;/*內容置中*/
+  background: rgba(0, 0, 0, 0.6);/*設定選單背景為黑色透明度60%*/
+  width:100%;/*寬度設定為100%(基本上會合第二層選單的ul一樣寬)*/
+  padding:5px 0;/*內距上/下各5px*/
+}
+#menu ul.list>li:hover{
+  /*設定滑鼠滑過第一層選單的li時的樣式*/
+  background: rgba(0, 0, 0, 0.8);/*設定選單背景為黑色透明度80%*/
+}
+#menu ul.list>li:hover ul{
+  /*設定滑鼠滑過第一層選單的li時第二層選單的樣式*/
+  display:block;/*顯示第二層選單並設為區塊元素*/
+}
+#menu ul.list>li:hover ul li:hover{
+  /*設定滑鼠滑過第二層選單的li的樣式*/
+  background: rgba(0, 0, 0, 0.8);/*設定選單背景為黑色透明度80%*/
+}
