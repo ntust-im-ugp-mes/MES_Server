@@ -17,3 +17,8 @@
 * **程序監控（Process-Based Monitor）**   
   顯示程序目前的狀態（如進度等）、所屬的物料等
   
+### 排程管理：
+* **全局概覽（Overall Monitor）** 
+
+* **製造排程（Production Scheduling）**   
+  提供製造排程功能，
