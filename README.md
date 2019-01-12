@@ -1,7 +1,7 @@
 # 先進生產製造執行系統（Advanced MES）
 </br>
 
-## 預定設計架構（Schema）
+## 第一階段預定設計架構（First Stage Schema）
 
 
 ### 生產監控：
@@ -20,5 +20,5 @@
 ### 排程管理：
 * **全局概覽（Overall Monitor）** 
 
-* **製造排程（Production Scheduling）**   
-  提供製造排程功能，
+* **作業排程（Process Scheduling）**   
+  提供製造排程功能，自ERP接手進行產品實際加工的排程，此亦為本系統可再深入研究之處，預計提供FIFO、SJF、PS、ST、EDD等排程方法
