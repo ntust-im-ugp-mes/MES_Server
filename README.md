@@ -26,3 +26,10 @@
 
 * **排程管理（Schedule Management）**   
   顯示目前作業排程狀態（如排程效率等，待補）
+
+### [庫存管理]：
+* **全局概覽（Overall Monitor）**
+
+* **庫存狀態（Inventory Viewer）**
+
+* **庫存分析（Inventory Analyser）**
