@@ -3,7 +3,7 @@
 
 ## 預定設計架構（Schema）
 
-* 現場監控
+* 生產監控
   * 全局概覽（Overall Monitor）
   * 機台監控（Machines-Based Monitor）
   * 物料監控（Materials-Based Monitor）
