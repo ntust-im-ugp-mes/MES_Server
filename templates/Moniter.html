@@ -1,7 +1,8 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block mainbody %}
     <head>
+		<script src=https://d3js.org/d3.v3.min.js charset="utf-8"></script>
         <style type="text/css">
             #winl{
                 width: 48%;
@@ -59,29 +60,73 @@
     <div id="winl">
         <div id="winbar">
             <div>
-                <span style="line-height: 40px; color: #d6d6d6; font-size:18px;">Station View State</span>
+                <span style="line-height: 40px; color: #d6d6d6; font-size:18px;">Station Status</span>
             </div>
         </div>
         <div id="sbsf">
-            <table>
-            {% for i in status_by_station %}
-                <tr><td><span style="color: #000000">{{ i }}</span></td></tr>
-            {% endfor %}
-            </table>
+			<script type="text/javascript"charset="utf-8">
+				var tabulate = function (data,columns) {
+					var table = d3.select('#sbsf').append('table')
+					var thead = table.append('thead')
+					var tbody = table.append('tbody')
+
+					thead.append('tr')
+					.selectAll('th')
+						.data(columns)
+						.enter()
+					.append('th')
+						.text(function (d) { return d })
+
+					var rows = tbody.selectAll('tr')
+						.data(data)
+						.enter()
+					.append('tr')
+					.style('background-color', function(d) { 
+							if (d.Status == 'Working') {return 'Lime';}
+							else if (d.Status == 'Idle') {return 'LightGrey';}
+							else if (d.Status == 'Error') {return 'red';}
+							else {return 'GhostWhite';}
+					});
+
+					var cells = rows.selectAll('td')
+						.data(function(row) {
+							return columns.map(function (column) {
+								return { column: column, value: row[column] }
+						})
+					})
+					.enter()
+					.append('td')
+					.text(function (d) { return d.value })			
+
+				return table;
+
+				}
+			
+				d3.csv("{% static 'data/Station_Status.csv' %}").get(function(error,data){
+					console.log(data);
+					var columns = ['Station','Status','Detail']
+					tabulate(data,columns)
+				});
+
+				
+			</script>
         </div>
     </div>
 
     <div id="winr">
         <div id="winbar">
             <div>
-                <span style="line-height: 40px; color: #d6d6d6; font-size:18px;">Object View State</span>
+                <span style="line-height: 40px; color: #d6d6d6; font-size:18px;">Object Status</span>
             </div>
         </div>
         <div id="sbof">
             <table>
-            {% for i in status_by_object %}
-                <tr><td><span style="color: #000000">{{ i }}</span></td></tr>
-            {% endfor %}
+				<tr><th>Object</th><th>Status</th><th>Detail</th></tr>
+				
+				{% for i in objects %}
+				<tr><td><span style="color: #000000">{{ i.name }}</span><td><span style="color: #000000">{{ i.status }}</span></td><td><span style="color: #000000">{{ i.detail }}</span></td></tr>
+				{% endfor %}
+			
             </table>
         </div>
     </div>
