@@ -15,6 +15,9 @@
 * **程序監控（Process-Based Monitor）**   
   顯示工作程序目前的狀態（如運行進度等）、所屬的物料等
   
+* **資訊視覺化（Data Visualization）**    
+  顯示生產線的佈置圖，並將監控資訊視覺化於該布置圖上，另外也可搭配其他（如Graph）輔助呈現資訊
+  
 ### [作業排程]：
 
 * **作業排程（Process Scheduling）**   
