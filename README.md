@@ -5,8 +5,6 @@
 
 
 ### [生產監控]：
-* **全局概覽（Overall Monitor）**  
-  將下方個子功能整合並簡明顯示於單一頁面中，以利於使用者快速瀏覽整體狀態
   
 * **機台監控（Machines-Based Monitor）**  
   顯示機台的狀態參數、基本分析（包含Utilization、Yeild、OEE、TEEP等）、所屬的物料、預定工作排程等
