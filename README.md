@@ -7,7 +7,7 @@
 ### [生產監控]：
   
 * **機台監控（Machines-Based Monitor）**  
-  顯示機台的狀態參數、基本分析（包含Utilization、Yeild、OEE、TEEP等）、所屬的物料、預定工作排程等
+  顯示機台的狀態參數、基本分析（包含Utilization、Yeild、OEE、TEEP等）、預定的工作排程、及該機台包含的在製品明細
   
 * **物料監控（Materials-Based Monitor）**   
   顯示物料目前的狀態、位置、所屬程序（被誰使用或加工等）、預定流向等
